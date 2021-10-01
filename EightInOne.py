@@ -18,6 +18,8 @@ def StartUp():
     for x in files:
         f = open(str(fileNames[counter] + ".py"), "w")
         f.writelines(files[counter])
+        g = open(str(fileNames[counter] + "Test" + ".py"), "w")
+        g.writelines(filesTests[counter])
         #f.close()
         print(counter)
         counter = counter + 1
@@ -122,11 +124,18 @@ if __name__ == '__main__':
     main()
 '''
 
-sphereMethodTest = ''''''
+sphereMethodTest = '''1'''
+cylinderMethodTest = '''2'''
+coneMethodTest = '''3'''
+cubeMethodTest = '''4'''
+triangleMethodTest = '''5'''
+trapizoidMethodTest = '''6'''
+cubeoidMethodTest = '''7'''
+eaulTriangleMethodTest = '''8'''
 
 
 files = [sphereMethod, cylinderMethod, coneMethod, cubeMethod, triangleMethod, trapizoidMethod, cubeoidMethod, eaulTriangleMethod]
-filesTests = [sphereMethodTest]
+filesTests = [sphereMethodTest, cylinderMethodTest, coneMethodTest, cubeMethodTest, triangleMethodTest, trapizoidMethodTest, cubeoidMethodTest, eaulTriangleMethodTest]
 def main():
     print("I refuse yet i dont refuse: ")
     StartUp()
