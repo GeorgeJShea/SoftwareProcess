@@ -18,10 +18,12 @@ def StartUp():
     for x in files:
         f = open(str(fileNames[counter] + ".py"), "w")
         f.writelines(files[counter])
+        counter = counter + 1
+    counter = 0
+    for x in files:
         g = open(str(fileNames[counter] + "Test" + ".py"), "w")
         g.writelines(filesTests[counter])
         #f.close()
-        print(counter)
         counter = counter + 1
 
 eaulTriangleMethod = '''
