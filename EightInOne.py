@@ -83,7 +83,11 @@ cubeMethod = '''
 def main():
     leg = float(input("Enter Cubes's Leg: "))
     print("Surface Area: ", 6 * leg**2, "Area: ", leg**3)
-    
+
+def TestMethod(value):
+    area = 6 * value**2
+    return area
+        
 if __name__ == '__main__':
     main()
 '''
@@ -126,14 +130,21 @@ if __name__ == '__main__':
     main()
 '''
 
-sphereMethodTest = '''1'''
+sphereMethodTest = '''
+
+'''
 cylinderMethodTest = '''2'''
 coneMethodTest = '''3'''
-cubeMethodTest = '''4'''
+cubeMethodTest = '''
+import unittest
+import Zero
+assert TestMethod(2) == 24
+'''
 triangleMethodTest = '''5'''
 trapizoidMethodTest = '''6'''
 cubeoidMethodTest = '''7'''
 eaulTriangleMethodTest = '''8'''
+
 
 
 files = [sphereMethod, cylinderMethod, coneMethod, cubeMethod, triangleMethod, trapizoidMethod, cubeoidMethod, eaulTriangleMethod]
@@ -153,6 +164,7 @@ def main():
     print("Shapes Calculator")
     print("1 Sphere || 2 Cylinder || 3 Cone || 4 Cube")
     print("5 Triangle || 6 Trapizoide || 7 Cubeoid || 8 Equal Triangle")
+    print("=====================================================")
     print("type anything else to exit")
     value = int(input("   "))
     if(value == 1):
