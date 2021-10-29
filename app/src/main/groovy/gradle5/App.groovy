@@ -13,59 +13,55 @@ public class App
 // export PATH=$PATH:/opt/gradle/gradle-7.2/bin
     public static void main(String[] args) {
 
-        System.out.println("__________________________________________");
-        System.out.println("1 || Cylinder");
-        System.out.println("2 || Sphere");
-        System.out.println("3 || Cone");
-        System.out.println("__________________________________________");
+        while (true) {
+            System.out.println("__________________________________________");
+            System.out.println("1 || Cylinder");
+            System.out.println("2 || Sphere");
+            System.out.println("3 || Cone");
+            System.out.println("__________________________________________");
 
-        Scanner scan = new Scanner(System.in);
-        int input = scan.nextInt();
-        System.out.println("__________________________________________");
-        if (input == 1)
-        {
-            System.out.println("Cylinder Calculator");
-            Cylinder newCyld = new Cylinder();
-            int radius = scan.nextInt();
-            newCyld.radius = radius;
-            System.out.println("==================");
-            int height = scan.nextInt();
-            newCyld.height = height;
+            Scanner scan = new Scanner(System.in);
+            int input = scan.nextInt();
+            System.out.println("__________________________________________");
+            if (input == 1) {
+                System.out.println("Cylinder Calculator");
+                Cylinder newCyld = new Cylinder();
+                int radius = scan.nextInt();
+                newCyld.radius = radius;
+                System.out.println("==================");
+                int height = scan.nextInt();
+                newCyld.height = height;
 
-            newCyld.SurfaceAreaCalc();
-            newCyld.VolumeCalc();
-            newCyld.ShapePrint();
-        }
-        else if (input == 2)
-        {
-            System.out.println("================== 2");
-            System.out.println("Cylinder Calculator");
-            Sphere myCircl = new Sphere();
-            int radius = scan.nextInt();
-            myCircl.radius = radius;
+                newCyld.SurfaceAreaCalc();
+                newCyld.VolumeCalc();
+                newCyld.ShapePrint();
+            } else if (input == 2) {
+                System.out.println("================== 2");
+                System.out.println("Cylinder Calculator");
+                Sphere myCircl = new Sphere();
+                int radius = scan.nextInt();
+                myCircl.radius = radius;
 
-            myCircl.SurfaceAreaCalc();
-            myCircl.VolumeCalc();
-            myCircl.ShapePrint();
-        }
-        else if (input == 3)
-        {
-            System.out.println("================== 3");
-            System.out.println("Cylinder Calculator");
-            Cone newCone = new Cone();
-            int radius = scan.nextInt();
-            newCone.radius = radius;
-            System.out.println("==================");
-            int height = scan.nextInt();
-            newCone.height = height;
+                myCircl.SurfaceAreaCalc();
+                myCircl.VolumeCalc();
+                myCircl.ShapePrint();
+            } else if (input == 3) {
+                System.out.println("================== 3");
+                System.out.println("Cylinder Calculator");
+                Cone newCone = new Cone();
+                int radius = scan.nextInt();
+                newCone.radius = radius;
+                System.out.println("==================");
+                int height = scan.nextInt();
+                newCone.height = height;
 
-            newCone.SurfaceAreaCalc();
-            newCone.VolumeCalc();
-            newCone.ShapePrint();
-        }
-        else
-        {
-            System.out.println("You are a failure and no one loves you ");
+                newCone.SurfaceAreaCalc();
+                newCone.VolumeCalc();
+                newCone.ShapePrint();
+            } else {
+                System.out.println("Goodnight");
+                break;
+            }
         }
     }
 
