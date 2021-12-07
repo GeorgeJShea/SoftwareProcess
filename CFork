@@ -1,0 +1,39 @@
+include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+
+int main() {
+   int array1[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+   int array2[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+   int sum1, loop1;
+   int sum2, loop2;
+   float avg1;
+   float avg2;
+   float avgOfavg;
+
+   sum1 = avg1 = 0;
+
+   for(loop1 = 0; loop1 < 10; loop1++) {
+      sum1 = sum1 + array1[loop1];
+   }
+   fork();
+   for(loop2 = 0; loop2 < 10; loop2++) {
+      sum2 = sum2 + array2[loop2];
+
+   }
+
+   avg1 = (float)sum1 / loop1;
+   avg2 = (float)sum2 / loop2;
+   avgOfavg =( avg1 + avg2) / 2;
+   printf("Average of array values is %.2f", avgOfavg);
+
+   return 0;
+}
+
+
+
+// Answer To Question
+// Multi threading is very useful larger sets of data the smalelr it is the more costly it becomes
+
+
+
